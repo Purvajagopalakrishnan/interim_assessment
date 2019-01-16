@@ -1,0 +1,40 @@
+<div class='card'>
+    <div class='card-header'>
+      {{pageTitle}}
+    </div>
+</div>
+<style>
+  a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+</style>
+<nav>
+<a class="active" (click)="onHit()">Employees</a>
+<a (click)= "onclick()">Register</a>
+<a (click)="onSubmit()">Employee Details</a>
+</nav>
+
+
+
+
+
+
+

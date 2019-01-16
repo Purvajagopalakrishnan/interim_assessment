@@ -1,0 +1,29 @@
+<style>
+    table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse; 
+                  }
+    th, td {
+         padding: 15px;
+         text-align: left;
+          }
+  </style>
+  
+ 
+  <body>
+      <table style="width:100%">
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Experience <button>Edit</button></th>
+          </tr>
+          <tr *ngFor="let emp2 of employee">
+              <td>{{emp2.id}}</td>
+              <td>{{emp2.name}}</td>
+              <td> {{emp2.designation}}</td>
+              <td> {{emp2.exp}}</td>
+  
+          </tr>
+      </table>
+      <br>

@@ -1,0 +1,52 @@
+<style>
+.label:before{
+  content:"*" ;
+  color:red   
+  }
+</style>
+
+
+<h1>Register</h1>
+<body>
+<form [formGroup]="newForm" (ngSubmit)="onSubmit()"  #formDir="ngForm">
+    <div class="form-group">
+        <label class="label">FirstName:</label><br>
+        <input type="text" formControlName="FirstName" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="label">DOB:</label><br>
+            <input type="date" formControlName="DOB" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="label">GENDER:</label><br>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+    </div>
+    <div class="form-group">
+        <label class="label">Email:</label><br>
+        <input type="text" formControlName="Email" class="form-control"/>
+</div>
+<div class="form-group">
+    <label class="label">Experience:</label><br>
+    <input type="text" formControlName="Experience" class="form-control"/>
+</div>
+<div class="form-group">
+    <label>Designation:</label><br>
+    <input type="text" formControlName="Designation" class="form-control"/>
+</div>
+
+<div class="form-group">
+    <label class="label">Type:</label><br>
+    <input type="radio" formControlName="Emp_Type" class="form-control" value="software engineer"/>software engineer
+    <input type="radio" formControlName="Emp_Type" class="form-control" value="senior software engineer"/>senior software engineer
+    <input type="radio" formControlName="Emp_Type" class="form-control" value="Technical lead"/>Technical Lead
+</div>
+
+    <div class="form-group"><br>
+            <button [disabled]="newForm.invalid &&  formDir.submitted" type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
+</body>
